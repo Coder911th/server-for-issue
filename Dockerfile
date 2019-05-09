@@ -1,6 +1,8 @@
 FROM node:10-alpine
 
 # Install acme.sh
+RUN apk add --no-cache curl
+RUN apk add --no-cache openssl
 RUN curl https://get.acme.sh | sh
 
 # Create app directory
