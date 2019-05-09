@@ -1,5 +1,8 @@
 FROM node:10-alpine
 
+# Install acme.sh
+RUN curl https://get.acme.sh | sh
+
 # Create app directory
 WORKDIR /usr/src/app
 
